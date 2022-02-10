@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package repo;
+option go_package = "github.com/michael.wang/cookbook-grpc;cookbook_grpc";
+import "google/protobuf/timestamp.proto";
+
+
+message Repo {
+    uint64 id = 1;
+    string name = 2;
+    string full_name = 3;
+    bool   private = 4;
+    User   owner = 5;
+    string description = 6;
+    bool   fork = 7;
+    string url = 8;
+    google.protobuf.Timestamp created_at = 9;
+    google.protobuf.Timestamp updated_at = 10;
+    uint32 stargazers_count = 11;
+    uint32 forks_count = 12;
+}
+
+message User {
+    uint64 id = 1;
+    string login = 2;
+    string avatar_url = 3;
+    string url = 4;
+    string starred_url = 5;
+    string repos_url = 6;
+}

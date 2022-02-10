@@ -1,0 +1,5 @@
+@baseURL = https://api.github.com
+@acceptJson = application/vnd.github.v3+json
+
+GET {{baseURL}}/repos/michael-wang/cookbook-grpc
+Accept: {{acceptJson}}
